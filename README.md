@@ -1,5 +1,6 @@
 # Advanced-Samples-Picking
 Advanced Samples Picking - multipurpose heuristic for classification tasks
+Way of picking samples based on predictions of model
 
 General idea
 
@@ -8,6 +9,7 @@ General idea
 3) Algorithm
    fit(train_X, train_y) -> predict(test_y) -> get probability distribution based on predictions (for example 30% of '0' and 70% of '1') ->
    -> modify picked samples to fit this distribution (the whole dataset has 20% of '0' and modified will have 30% of '0') -> fit(X_modif, y_modif) ...
+   Note that we can use weights from previous fit (because small modifiction didn't change it)
    
 4) Why we need it?
    If train and test are very dissimilar - we will get poor performace (for example if train has 10% of '0' but test has 90% of '0' -- linear regression (for image) will give us 11% accuracy)
