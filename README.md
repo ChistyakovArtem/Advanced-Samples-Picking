@@ -13,6 +13,8 @@ General idea
    If train and test are very dissimilar - we will get poor performace (for example if train has 10% of '0' but test has 90% of '0' -- linear regression (for image) will give us 11% accuracy)
    This is a way to fix this problem
    
+More
+  
 5) What's wrong
    You can change probas here
    t_ = polish_data(get_loader(True, batch_size=one), batch_size=one, p=np.array([0.2, 0.8]))
